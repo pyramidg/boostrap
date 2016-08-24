@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myButton">
+<html ng-app="directoryApp">
 
 <head>
   <meta charset="utf-8">
@@ -84,127 +84,32 @@
 
     </div>
 
-    <div class="" id="myButton" ng-controller="ButtonController">
+    <div class="container" id="myButton" ng-controller="directoryController">
+
+    <div ng-init="item in list" class="">
+
+      <ul>
+        <input type="text" ng-model="search">
+
+        <ol ng-repeat="item in list | filter:search">
+          {{item.name}} - {{item.age}}
+        </ol>
+
+      </ul>
 
     </div>
 
 
-    <div class="" id="trivia">
-      <ol id="unOrder">
-        <li>Add Items:</li>
-        <li>Add Items:</li>
-        <li>Add Items:</li>
-      </ol>
-
-    </div>
-    <div class="" id="rightDiv">
-
-    </div>
-    <div class="row">
-
-
-      <div class="col-sm-4">
-        <h1 class="text-center">Form</h1>
-        <form action="#/" class="form1">
-
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File upload</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <h5>Favorite Programming Language</h5>
-            <label>
-              <input type="checkbox">Java</label>
-            <label>
-              <input type="checkbox" name="check" value=""> Javascript</label>
-          </div>
-          <button type="submit" class="button btn btn-primary ">Submit</button>
-          <button type="submit" class="btn btn-danger ">Delete</button>
-        </form>
-
-      </div>
-
-
-      <div class="col-sm-4">
-
-
-        <h1 class="text-center">Form #1</h1>
-        <form action="#/" class="form1">
-
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File upload</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <h5>Favorite Programming Language</h5>
-            <label>
-              <input type="checkbox">Java</label>
-            <label>
-              <input type="checkbox" name="check" value=""> Javascript</label>
-          </div>
-          <button type="submit" class="button btn btn-primary ">Submit</button>
-          <button type="submit" class="btn btn-danger ">Delete</button>
-        </form>
+</div>
 
 
 
-      </div>
 
-
-
-      <div class="col-sm-4">
-        <h1 class="text-center">Form #2</h1>
-        <form action="#/" class="form1">
-
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputFile">File upload</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-          </div>
-          <div class="checkbox">
-            <h5>Favorite Programming Language</h5>
-            <label>
-              <input type="checkbox">Java</label>
-            <label>
-              <input type="checkbox" name="check" value=""> Javascript</label>
-          </div>
-          <button type="submit" class="button btn btn-primary ">Submit</button>
-          <button type="submit" class="btn btn-danger ">Delete</button>
-        </form>
-
-      </div>
-
-
-    </div>
-    <!-- 1st Container Ends -->
 
   </div>
+  <!-- 1st Container Ends -->
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   <!-- jquery compiled  -->
@@ -215,8 +120,11 @@
   <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
   <!-- jquery works!  -->
   <script type="text/javascript" src="http://malsup.github.com/jquery.cycle.all.js"></script>
+  <script src="directory.js" charset="utf-8"></script>
   <script src="javascript.js" charset="utf-8"></script>
   <script src="button.js" charset="utf-8"></script>
+
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="jquery-3.1.0.js"></script>
