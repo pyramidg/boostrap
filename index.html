@@ -61,6 +61,25 @@
 
   <div class="container-fluid">
 
+
+
+
+
+    <div class="row" id="myButton" ng-controller="directoryController">
+
+      <div class="col-md-4">
+        <h1 class="text-center" id="heading">Learn Javascript</h1>
+        <ul>
+               <input type="text" ng-model="search">
+          <ol ng-repeat="item in list | filter:search">
+          <em>{{item.name}} - {{item.age}}</em>  
+          </ol>
+        </ul>
+      </div>
+    </div>
+
+
+
     <div class="row">
       <div class="col-md-4">
         <h3 class="text-center">Left</h3>
@@ -78,26 +97,6 @@
       </div>
 
     </div>
-
-    <div id="head">
-      <h1 class="text-center" id="heading">Learn Javascript</h1>
-
-    </div>
-
-    <div class="container" id="myButton" ng-controller="directoryController">
-
-      <ul>
-        <input type="text" ng-model="search">
-
-        <ol ng-repeat="item in list | filter:search">
-          {{item.name}} - {{item.age}}
-        </ol>
-
-      </ul>
-
-    </div>
-
-
 
 
 
